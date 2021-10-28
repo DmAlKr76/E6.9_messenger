@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title id="userProfileTitle"></title>
-    <link href="../../../static/css/profile.css" rel="stylesheet">
 </head>
 <body>
 {% if messages %}
-      <ul class="messagelist">
+      <ul>
         {% for message in messages %}
             <li>{{message}}</li>
         {% endfor %}
       </ul>
 {% endif %}
-<h1 class="title-messenger">messenger</h1>
-<div class="container">
-  <div class="header">
-      <p class="back" id="backButton">&#8592</p>
+<h1>messenger</h1>
+<div>
+  <div>
+      <p id="backButton">&#8592</p>
   </div>
-  <div class="middle" id="pageContentContainer">
+  <div id="pageContentContainer">
     <img src="" alt="Аватар" class="user-pic" id="userAvatar"/>
-    <h4 class="name" id="userID"></h4>
-    <h4 class="rooms" id="userRooms"><i style="font-size: 16px; color: rgba(255,255,255,0.65)">Комнаты: </i></h4>
-    <button class="btn-send" id="sendPrivateMessage">Отправить личное сообщение</button><br/>
+    <h4 id="userID"></h4>
+    <h4 id="userRooms"><i style="font-size: 16px; color: red">Комнаты: </i></h4>
+    <button id="sendPrivateMessage">Отправить личное сообщение</button><br/>
   </div>
 </div>
-<script src="../../../static/js/profile.js"></script>
+<script src="../static/js/profile.js"></script>
 </body>
 </html>

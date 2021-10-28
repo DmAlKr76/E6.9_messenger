@@ -1,16 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-#from django.contrib.auth.models import User
+
 
 class User(AbstractUser):
-    #user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(upload_to='images/avatars/', default='images/avatars/default.png',
                                verbose_name='Аватар')
     about = models.TextField(verbose_name='О себе')
-    #REQUIRED_FIELDS = ['email', 'about']
-    #SEX_CHOICES = (('M', 'Мужчина'), ('W', 'Женщина'), ('N', 'Неопределенный'))
-    #age = models.IntegerField(verbose_name='Возраст')
-    #sex = models.CharField(max_length=50, choices=SEX_CHOICES, default='N', verbose_name='Пол')
 
     def __str__(self):
         return self.username

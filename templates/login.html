@@ -2,12 +2,11 @@
 <html lang="en">
   <head>
     <title>Вход</title>
-    <link href="../../static/css/profile_edit.css" rel="stylesheet">
   </head>
   <body>
-    <h1 class="title-messenger">messenger</h1>
-    <form class="main-form" method="POST" action="{% url 'account_login' %}">
-        <p class="back" id="backButton">&#8592</p>
+    <h1>messenger</h1>
+    <form method="POST" action="{% url 'account_login' %}">
+        <p id="backButton">&#8592</p>
         <h2>Вход</h2>
         <h2>Не зарегистрированы? <a href="{{ signup_url }}">Регистрация</a></h2>
         {% csrf_token %}
@@ -15,8 +14,8 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn" type="submit">Войти</button>
+        <button type="submit">Войти</button>
     </form>
-  <script src="../../static/js/login.js"></script>
+  <script src="../static/js/login.js"></script>
   </body>
 </html>
